@@ -8,6 +8,9 @@ jobs:
       - run:
           name: Greeting
           command: echo Hello, world.
+      - run:
+          name: It might work
+          command: echo We did it reddit.      
   two:
     docker:
       - image: debian:stretch
