@@ -1,16 +1,29 @@
 version: 2
 jobs:
-  build:
+  one:
+    build:
+      docker:
+        - image: debian:stretch
+
+      steps:
+        - checkout
+
+        - run:
+            name: Greeting
+            command: echo Hello, world.
+
+        - run:
+            name: Print the Current Time
+            command: date
+  two:
     docker:
       - image: debian:stretch
-
     steps:
       - checkout
-
-      - run:
-          name: Greeting
-          command: echo Hello, world.
-
-      - run:
-          name: Print the Current Time
-          command: date
+      - run: echo "A more familiar hi"
+workflows:
+  version: 2
+  one_and_two:
+    jobs:
+      - one
+      - two
