@@ -5,13 +5,17 @@ jobs:
       - image: debian:stretch
     steps:
       - checkout
-      - command: echo A first hello
+        - run:
+            name: Greeting
+            command: echo Hello, world.
   two:
     docker:
       - image: debian:stretch
     steps:
       - checkout
-      - command: echo A more familiar hi
+        - run:
+            name: Greeting
+            command: echo A more familiar hi
       
 workflows:
   version: 2
