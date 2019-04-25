@@ -11,7 +11,7 @@ TEST_CASE("Creating a Point", "[point]") {
 
 TEST_CASE("Creating and Setting Values to a Point", "[point]") {
     Point p;
-    p.setX(5);
+    p.setX(2);
     p.setY(3);
 
     REQUIRE(p.getX() == 2);
