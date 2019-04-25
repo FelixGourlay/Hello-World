@@ -1,8 +1,7 @@
 version: 2
 jobs:
   one:
-    build:
-      docker:
+    docker:
         - image: debian:stretch
 
       steps:
